@@ -1,0 +1,4 @@
+com\dandelion\mapper\CourseMapper.class
+com\dandelion\mapper\StudentMapper.class
+com\dandelion\mapper\TeacherCourseMapper.class
+com\dandelion\mapper\TeacherMapper.class

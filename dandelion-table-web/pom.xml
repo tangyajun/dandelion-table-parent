@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>dandelion-table-web</artifactId>
+  
+  <parent>
+    <groupId>com.dandelion</groupId>
+    <artifactId>dandelion-table-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  
+  
+  <dependencies>
+  
+  	<dependency>
+  		<groupId>com.dandelion</groupId>
+  		<artifactId>dandelion-table-service</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	
+  	<!-- <dependency>
+  		<groupId>com.dandelion</groupId>
+  		<artifactId>dandelion-table-entities</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency> -->
+  	
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-web</artifactId>
+	    <version>1.5.9.RELEASE</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.mybatis.spring.boot</groupId>
+	    <artifactId>mybatis-spring-boot-starter</artifactId>
+	    <version>1.3.0</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+	</dependency>
+
+  </dependencies>
+  
+  <build>
+    <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+                <!-- <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+                <filtering>false</filtering> -->
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+                <!-- <filtering>false</filtering> -->
+            </resource>
+    </resources>
+  	<plugins>
+  		<plugin>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-maven-plugin</artifactId>
+		    <version>1.5.8.RELEASE</version>
+			<configuration>
+				<mainClass>com.dandelion.web.DandelionApplication</mainClass>
+				<layout>ZIP</layout>
+			</configuration>  	
+			<executions>
+				<execution>
+					<goals>
+						<goal>repackage</goal>
+					</goals>
+				</execution>
+			</executions>	
+  		</plugin>
+  	</plugins>
+  </build>
+</project>

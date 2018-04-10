@@ -1,0 +1,4 @@
+com\dandelion\domain\Student.class
+com\dandelion\domain\Course.class
+com\dandelion\domain\TeacherCourse.class
+com\dandelion\domain\Teacher.class
